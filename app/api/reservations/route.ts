@@ -26,6 +26,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // Available stock
     const availableStock =
       inventory.totalStock - inventory.reservedStock;
 
@@ -37,7 +38,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Create expiry time (15 mins)
+    // Expiry time (15 mins)
     const expiresAt = new Date(
       Date.now() + 15 * 60 * 1000
     );
@@ -45,7 +46,7 @@ export async function POST(req: NextRequest) {
     // Transaction
     const reservation = await prisma.$transaction(
       async (tx) => {
-        // Update reserved stock
+        // Increase reserved stock
         await tx.inventory.update({
           where: {
             id: inventory.id,
