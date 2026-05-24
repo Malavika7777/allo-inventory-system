@@ -1,3 +1,6 @@
+My Assessment Demo Link : https://allo-inventory-system-jwoz.vercel.app/
+My Github Link : https://github.com/Malavika7777/allo-inventory-system
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
